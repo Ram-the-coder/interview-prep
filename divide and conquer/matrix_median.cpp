@@ -1,3 +1,9 @@
+/*
+    We are given a row wise sorted matrix of size r*c, 
+    we need to find the median of the matrix given. 
+    It is assumed that r*c is always odd.
+*/
+
 // Solution 1
 // Time complexity: O(r^2 * c)
 // Space complexity: O(r)
