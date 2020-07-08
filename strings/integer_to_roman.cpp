@@ -1,3 +1,12 @@
+/*
+    Convert a decimal number lying between 1-3999 to roman numerals
+*/
+
+/*
+    Solution
+    Time Complexity: O(log10(n))
+    Space Complexity: O(1)
+*/
 string convertToRoman(int n) 
 {
     switch(n) {
@@ -17,18 +26,19 @@ string convertToRoman(int n)
         default: break;
     }
 
-    vector<int> divisors{1000, 500, 100, 50, 10, 5, 1};
-    int i = 0;
+    int divisor = 1000;
 
     string roman_equivalent = "";
     
     while(n) {
-        int q = n / divisors[i];
-        if(q == 9 || q == 4) roman_equivalent += convertToRoman(q * divisors[i]);
-        else for(int k=0; k<q; ++k) roman_equivalent += convertToRoman(divisors[i]);
-        n = n % divisors[i];
-        ++i;
+        int q = n / divisor;
+        if(q == 9) roman_equivalent += convertToRoman(9 * divisor);
+        else if(q >= 5) roman_equivalent += convertToRoman(5 * divisor) + convertToRoman((q - 5) * divisor);
+        else if(q == 4) roman_equivalent += convertToRoman(4 * divisor);
+        else for(int k=0; k<q; ++k) roman_equivalent += convertToRoman(divisor);
+        n = n % divisor;
+        divisor /= 10;
     }
-
+    
     return roman_equivalent;
 }
