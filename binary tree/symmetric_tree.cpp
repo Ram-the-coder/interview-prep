@@ -1,3 +1,10 @@
+/*
+    Given a Binary Tree. Check whether it is Symmetric or not, i.e. whether the binary tree is a Mirror image of itself or not.
+*/
+
+// Solution
+// TC: O(n)
+// SC: O(Height)
 bool isSymmetric(struct Node* root)
 {
     if(!root) return true;
