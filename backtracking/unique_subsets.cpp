@@ -8,6 +8,10 @@
 */
 
 /******************** Solution 1 ********************/
+/*
+    TC: O(n * 2^n)
+    SC: O(2^n)
+*/
 void get_unique_subsets(vii &a, int start, vii &subset, vvii &subsets) {
     
     if(start >= a.size()) {
@@ -66,6 +70,10 @@ int main() {
 
 
 /******************** Solution 2 ********************/
+/*
+    TC: O(2^n)
+    SC: O(1)
+*/
 void print_subset(vii &subset) {
     cout << "(";
     if(subset.size() > 0) {
