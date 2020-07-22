@@ -1,3 +1,7 @@
+/*
+    Given a bst and key, find the floor and ceil value of the key in the bst
+*/
+
 int Ceil(node* root, int input) 
 { 
     // Base case 
