@@ -21,7 +21,7 @@ lld kth_smallest_element(vll &a, lld k) {
 }
 
 // Solution 2 - Quick Sort
-// Time Complexity: O(logn)
+// Time Complexity: O(n)
 // Space Complexity: O(1)
 lld partition(vll &a, lld low, lld high) {
     lld pivot = rand() % (high - low + 1);
@@ -45,3 +45,5 @@ lld kth_smallest_element(vll &a, lld k) {
     }
     return -1;
 }
+
+// Solution - O(logn) - queries, O(nlogn) - preprocessing - https://stackoverflow.com/questions/15237327/find-kth-smallest-number-in-ologn-time
