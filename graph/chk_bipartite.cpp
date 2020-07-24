@@ -5,7 +5,7 @@
 
 /*
     Solution
-    Time Complexity: O(V + E)
+    Time Complexity: O(V^2), if edges are depicted using adjacency list then O(V + E)
     Space Complexity: O(V)
 
     Logic:
