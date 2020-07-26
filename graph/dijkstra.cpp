@@ -10,6 +10,9 @@ int get_next_vertex(vector<int> &shortest_path_set, vector<int> &min_dist_from_s
 }
 
 /*
+    Single Source Shortest Path Algorithm
+    Doesn't work if graph contains negative weights
+    Greedy Algorithm
     Time Complexity: 
         O(V^2) - if edges are represented using adjacency matrix
         O(ElogV) - if edges are represented using adjacency list and binary heap is used

@@ -7,6 +7,17 @@ public:
     Edge(int f, int t, int w) : from(f), to(t), weight(w) {}
 };
 
+/*
+    Single Source Shortest Path Algorithm
+    Also detects negative cycles and works with negative edges unlike dijkstra
+    DP Algorithm
+    Time Complexity: O(VE)
+    Space Complexity: O(V + E)
+*/
+
+/*
+ * edges is a vector of directed edges in the graph
+*/
 vector<int> bellman_ford(vector<Edge> &edges, int num_vertices, int source) {
     vector<int> distance(num_vertices, INT_MAX);
     distance[source] = 0;
